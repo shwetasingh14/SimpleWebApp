@@ -1,5 +1,5 @@
 
-package org.pankaj.shwetawebapp.conn;
+package org.pankaj.shwetawebapp;
 
 public class Product {
 	
