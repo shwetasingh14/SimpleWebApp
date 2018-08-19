@@ -7,6 +7,6 @@
 |
 <a href="${pageContext.request.contextPath }/userInfo">My Account Info</a>
 |
-<a href="${pageContext.request.contextPath }/Login">Login</a>
+<a href="${pageContext.request.contextPath }/login">Login</a>
 
 </div>

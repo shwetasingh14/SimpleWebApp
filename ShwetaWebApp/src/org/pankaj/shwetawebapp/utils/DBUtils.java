@@ -14,7 +14,7 @@ public class DBUtils {
 	public static User_Acct findUser(Connection conn,
 			String userName,String password)throws SQLException{
 		
-		String sql = "Select * from User_Acct where User_Name =? and password=?";
+		String sql = "Select User_Name,Password,Gender from UserAccount Where User_Name = ? and Password = ?";
 		
 		PreparedStatement pstm = conn.prepareStatement(sql);
 		pstm.setString(1, userName);
@@ -36,7 +36,7 @@ public class DBUtils {
 	}
 	public static User_Acct findUser(Connection conn,String userName)throws SQLException{
 		
-		String sql = "Select * from User_Acct where User_Name =?";
+		String sql = "Select User_Name,Password,Gender from UserAccount" +"where User_Name=?";
 		PreparedStatement pstm = conn.prepareStatement(sql);
 		pstm.setString(1, userName);
 		
@@ -55,7 +55,7 @@ public class DBUtils {
 		
 	}
 public static List<Product>queryProduct(Connection conn)throws SQLException{
-	String sql = "Select * from Product";
+	String sql = "Select Code,Name,Price from Product";
 	
 	PreparedStatement pstm = conn.prepareStatement(sql);
 	
@@ -76,7 +76,7 @@ public static List<Product>queryProduct(Connection conn)throws SQLException{
 	
 }
 	public static Product findProduct(Connection conn,String code)throws SQLException{
-		String sql = "Select * from Product where Code=?";
+		String sql = "Select Code,Name,Price from Product where Code = ?";
 		
 		
 		PreparedStatement pstm = conn.prepareStatement(sql);
@@ -95,8 +95,8 @@ public static List<Product>queryProduct(Connection conn)throws SQLException{
 	public static void updateProduct(Connection conn,Product product)throws SQLException{
 		String sql = "Update Product set Name=?,Price=? where Code=?";
 		
-		
 		PreparedStatement pstm = conn.prepareStatement(sql);
+	
 	pstm.setString(1, product.getName());
 	pstm.setFloat(2,product.getPrice());
 	pstm.setString(3,product.getCode());
@@ -104,7 +104,7 @@ public static List<Product>queryProduct(Connection conn)throws SQLException{
 	
 	}
 	public static void insertProduct(Connection conn,Product product)throws SQLException{
-		String sql = "Insert into Product(Code,Name,Price)values(???)";
+		String sql = "Insert into Product values(?,?,?)";
 		
 		PreparedStatement pstm = conn.prepareStatement(sql);
 	

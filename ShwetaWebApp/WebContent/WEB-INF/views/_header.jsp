@@ -3,7 +3,7 @@
     
     <div style="background: #EOEOEO; height:55px; padding:5px;">
     <div style="float: left">
-    <h1>My Website</h1>
+    <h1>My WebSite</h1>
     </div>
     <div style="float: right; padding: 10px; text-align: right;">
     <!-- User store in session with attribute: loginedUser -->

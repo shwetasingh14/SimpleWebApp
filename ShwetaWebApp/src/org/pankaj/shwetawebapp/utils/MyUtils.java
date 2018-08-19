@@ -39,7 +39,7 @@ public class MyUtils {
 		cookieUserName.setMaxAge(24*60*60);
 		response.addCookie(cookieUserName);
 	}
-	public static String getUserNamelnCookie(HttpServletRequest request) {
+	public static String getUserNameInCookie(HttpServletRequest request) {
 		Cookie[] cookies=request.getCookies();
 		if(cookies!=null) {
 			for(Cookie cookie :cookies) {

@@ -51,7 +51,7 @@ public void doFilter(ServletRequest request,ServletResponse response,FilterChain
 	
 	String checked = (String)session.getAttribute("COOKIE_CHECKED");
 	if(checked==null && conn!=null) {
-		String userName = MyUtils.getUserNamelnCookie(req);
+		String userName = MyUtils.getUserNameInCookie(req);
 		try {
 			User_Acct user=DBUtils.findUser(conn, userName);
 			MyUtils.storeLoginedUser(session, user);

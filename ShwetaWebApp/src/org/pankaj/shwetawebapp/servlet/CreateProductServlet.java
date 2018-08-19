@@ -28,7 +28,7 @@ public class CreateProductServlet extends HttpServlet{
 			throws ServletException,IOException{
 		
 
-RequestDispatcher dispatcher =request.getServletContext().getRequestDispatcher("/WEB-INF/views/CreateProductView.jsp");
+RequestDispatcher dispatcher =request.getServletContext().getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
 
 dispatcher.forward(request,response);
 }
